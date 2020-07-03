@@ -1,7 +1,7 @@
 # Stopwatch
 ![iOS Apps: Stopwatch by swift | Maruf | Maruf](doc/cover6.3.gif)
 
-### What we wiil Learn
+### What we will Learn
 * Swift Timer
 * TableView update according to creating new value
 * Change Button Attribute on demand
@@ -84,7 +84,7 @@ let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #sel
     
 ```
 
-### CADisplayLink for update Game Screen insted of Timer objects
+### CADisplayLink for update Game Screen inited of Timer objects
 it can return 120 loops per second
 
 ```swift
@@ -102,13 +102,13 @@ it can return 120 loops per second
 
 We create a single view application. on our story board we take two label under a new view, pin this view top of the layout & Make mainTimer Label horizontally and vertically center, and lapTimerLabel 10 px up of it with right align to the mainTimerLabel.
 
-We take two button under a horizontal stackView, make it horizontally center and pin 10 from ther upper stack view.
+We take two button under a horizontal stackView, make it horizontally center and pin 10 from the upper stack view.
 
-Drag and drop a table view under the tableView under the stackView, put 10 distance between them and pin 3 remaining side to the view. Create a protype cell Named it lapCell. Take two label into a stackView into the cell content area & set this new stack center to the container Cell Content.
+Drag and drop a table view under the tableView under the stackView, put 10 distance between them and pin 3 remaining side to the view. Create a prototype cell Named it lapCell. Take two label into a stackView into the cell content area & set this new stack center to the container Cell Content.
 
 ## Programs:
 Step 1:<br>
-We wiil create a swift file named Stopwatch, create a data model Stopwatch of NSObjct type including two data, Counter of type float and timer of Timer type and init its value.
+We will create a swift file named Stopwatch, create a data model Stopwatch of NSObjct type including two data, Counter of type float and timer of Timer type and init its value.
 
 ```swift
 import Foundation
@@ -123,8 +123,8 @@ class Stopwatch: NSObject {
   }
 }
 ```
-Step 2: Initializaton
-We will create some variable and outlet of our UI Components. We will nitializ initCircleButton Cluser and changeButton function 
+Step 2: Initialization
+We will create some variable and outlet of our UI Components. We will initialize initCircleButton Cluser and changeButton function 
 
 ```swift
    // MARK: - Variables
@@ -167,7 +167,7 @@ Make our view controller subclass of UITableViewDelegate, UITableViewDataSource 
     }   
 ```
 Step 4: playPushButton on Pressed
-Here we will initialized our timer using our dataModel, change some button attributes and call a functin to count the time by selector, before that we will create an extension of Selector, which will call OBJC function, under those OBJC function we will call updateTimer() method which will update our View.
+Here we will initialized our timer using our dataModel, change some button attributes and call a function to count the time by selector, before that we will create an extension of Selector, which will call OBJC function, under those OBJC function we will call updateTimer() method which will update our View.
 If Timer already on running mode, here we will simply Push it but our can't not setup our counter to zero, so that we can restart it with its current value.
 
 ```swift
